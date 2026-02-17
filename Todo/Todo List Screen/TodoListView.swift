@@ -13,11 +13,19 @@ struct TodoListView: View {
     
     var body: some View {
         
-        List($viewModel.todoItems) { $item in
-            TodoItemRow(item: $item.onValueChange {
-                viewModel.sortItems()
-            })
-        }.onAppear {
+        List {
+            ForEach($viewModel.todoItems) { $item in
+                TodoItemRow(item: $item.onValueChange {
+                    viewModel.sortItems()
+                })
+            }
+            .onDelete { indexSet in
+                viewModel.deleteItems(at: indexSet)
+                print(viewModel.todoItems)
+            }
+            .onDelete(perform: viewModel.deleteItems(at:))
+        }
+        .onAppear {
             viewModel.loadItems()
         }
     }

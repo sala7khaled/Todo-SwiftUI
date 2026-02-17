@@ -23,4 +23,8 @@ class TodoListViewModel: ObservableObject{
         todoItems.sort { !$0.isDone && $1.isDone }
     }
     
+    func deleteItems(at indexSet: IndexSet) {
+        todoItems.remove(atOffsets: indexSet)
+    }
+    
 }
