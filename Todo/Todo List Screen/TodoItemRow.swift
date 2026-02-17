@@ -36,12 +36,12 @@ struct TodoItemRow: View {
     }
 }
  
-#Preview("1", traits: .fixedLayout(width: 300, height: 70)) {
+#Preview("Title & Desc", traits: .fixedLayout(width: 300, height: 70)) {
     @Previewable @State var item = TodoItemModel(id: UUID(), title: "Buy some bread", description: "Get a zero calorie one", isDone: true)
     TodoItemRow(item: $item)
 }
 
-#Preview("2", traits: .fixedLayout(width: 300, height: 70)) {
+#Preview("Title Only", traits: .fixedLayout(width: 300, height: 70)) {
     @Previewable @State var item = TodoItemModel(id: UUID(), title: "Buy some milk", isDone: false)
     TodoItemRow(item: $item)
 }

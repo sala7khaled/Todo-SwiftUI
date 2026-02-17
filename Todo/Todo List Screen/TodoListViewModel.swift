@@ -15,8 +15,12 @@ class TodoListViewModel: ObservableObject{
         do {
             todoItems = try .fromJSON(named: "TodoItems")
         } catch {
-            print(error)
+            fatalError("\(error)")
         }
+    }
+    
+    func sortItems() {
+        todoItems.sort { !$0.isDone && $1.isDone }
     }
     
 }

@@ -14,7 +14,9 @@ struct TodoListView: View {
     var body: some View {
         
         List($viewModel.todoItems) { $item in
-            TodoItemRow(item: $item)
+            TodoItemRow(item: $item.onValueChange {
+                viewModel.sortItems()
+            })
         }.onAppear {
             viewModel.loadItems()
         }

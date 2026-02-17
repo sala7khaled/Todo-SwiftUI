@@ -1,13 +1,25 @@
 [
     {
         "id": "f2f20e04-39c8-440e-8993-85edb0293852",
-        "title": "Buy some bread 🥖",
+        "title": "Buy some apple 🍎",
         "isDone": false
     },
     {
-        "id": "eec48f65-4cc8-44cc-9db3-6da65dc12978",
+        "id": "eec48f65-4cc8-44cc-9db3-6da65dc12971",
+        "title": "Buy some bread 🥖",
+        "description": "Brown or white bread",
+        "isDone": false
+    },
+    {
+        "id": "eec48f65-4cc8-44cc-9db3-6da65dc12972",
         "title": "Buy some milk 🥛",
-        "description": "Get lactose free milka d adad ad ad ad  ad add a ad",
+        "description": "Get lactose free milk",
+        "isDone": false
+    },
+    {
+        "id": "eec48f65-4cc8-44cc-9db3-6da65dc12973",
+        "title": "Buy some snacks 🍟",
+        "description": "Healthy chips",
         "isDone": false
     }
 ]
