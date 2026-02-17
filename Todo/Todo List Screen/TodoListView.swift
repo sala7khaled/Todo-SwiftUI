@@ -13,20 +13,32 @@ struct TodoListView: View {
     
     var body: some View {
         
-        List {
-            ForEach($viewModel.todoItems) { $item in
-                TodoItemRow(item: $item.onValueChange {
-                    viewModel.sortItems()
-                })
+        NavigationView {
+            List {
+                ForEach($viewModel.todoItems) { $item in
+                    TodoItemRow(item: $item.onValueChange {
+                        viewModel.sortItems()
+                    })
+                    .listRowInsets(EdgeInsets())
+//                    .alignmentGuide(.listRowSeparatorLeading) { _ in 0 }
+                }
+                .onDelete { indexSet in
+                    viewModel.deleteItems(at: indexSet)
+                    print(viewModel.todoItems)
+                }
+                .onDelete(perform: viewModel.deleteItems(at:))
+                .onMove(perform: viewModel.moveItem(from:to:))
             }
-            .onDelete { indexSet in
-                viewModel.deleteItems(at: indexSet)
-                print(viewModel.todoItems)
+            .navigationTitle("Today's Tasks")
+            .listStyle(.insetGrouped)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    EditButton()
+                }
             }
-            .onDelete(perform: viewModel.deleteItems(at:))
-        }
-        .onAppear {
-            viewModel.loadItems()
+            .onAppear {
+                viewModel.loadItems()
+            }
         }
     }
 }

@@ -27,4 +27,8 @@ class TodoListViewModel: ObservableObject{
         todoItems.remove(atOffsets: indexSet)
     }
     
+    func moveItem(from indexSet: IndexSet, to newIndex: Int) {
+        todoItems.move(fromOffsets: indexSet, toOffset: newIndex)
+    }
+    
 }
