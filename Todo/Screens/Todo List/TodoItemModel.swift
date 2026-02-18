@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct TodoItemModel: Codable, Identifiable {
+struct TodoItemModel: Hashable, Codable, Identifiable {
     let id: UUID
-    let title: String
+    var title: String
     var description: String?
     var isDone: Bool = false
 }

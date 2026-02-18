@@ -21,5 +21,41 @@
         "title": "Buy some snacks 🍟",
         "description": "Healthy chips",
         "isDone": false
+    },
+    {
+        "id": "3a7c9e11-2b4e-4d6a-9a1f-1c3b9f4d8a01",
+        "title": "Go for a walk 🚶‍♂️",
+        "description": "30 minutes around the park",
+        "isDone": false
+    },
+    {
+        "id": "7b2d5f44-8c91-4f9a-b2c7-5e8a1d3f6b02",
+        "title": "Call mom 📞",
+        "description": "Check on her weekend plans",
+        "isDone": false
+    },
+    {
+        "id": "9c4e1a77-6d32-4a8b-8f3d-2b7e4c9d5f03",
+        "title": "Finish SwiftUI lesson 📱",
+        "description": "Review @StateObject vs @ObservedObject",
+        "isDone": true
+    },
+    {
+        "id": "1d8f3b22-5e64-4c7a-9b8e-7f2c1a6d4e04",
+        "title": "Workout session 💪",
+        "description": "Upper body training",
+        "isDone": false
+    },
+    {
+        "id": "4e2a9c55-7b13-4d8f-9c2a-6f1b3e7d8c05",
+        "title": "Read 20 pages 📖",
+        "description": "Continue current book before bed",
+        "isDone": true
+    },
+    {
+        "id": "8f6b1d33-2c74-4a9e-b5d2-3e9a7c1f6b06",
+        "title": "Pay electricity bill 💡",
+        "description": "Due before Friday",
+        "isDone": false
     }
 ]
