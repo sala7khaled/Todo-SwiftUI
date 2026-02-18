@@ -15,7 +15,7 @@ class TodoListViewModel: ObservableObject{
         guard todoItems.isEmpty else { return }
         do {
             todoItems = try .fromJSON(named: "TodoItems")
-//            sortItems()
+            sortItems()
         } catch {
             fatalError("\(error)")
         }

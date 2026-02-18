@@ -9,9 +9,22 @@ import SwiftUI
 
 @main
 struct TodoApp: App {
+    
+    @State var selectedTab: AppTab = .todoList
+    
     var body: some Scene {
+        
         WindowGroup {
-            TodoListView()
+            TabView(selection: $selectedTab) {
+                ForEach(AppTab.allCases, id: \.self) { tab in
+                    tab.view
+                        .tabItem {
+                            Image(systemName: tab.icon)
+                            Text(tab.title)
+                        }
+                        .tag(tab)
+                }
+            }
         }
     }
 }
