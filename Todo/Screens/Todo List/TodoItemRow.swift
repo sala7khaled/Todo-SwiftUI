@@ -22,7 +22,7 @@ struct TodoItemRow: View {
                     .font(.headline)
                     .strikethrough(item.isDone)
                 
-                if let description = item.description {
+                if let description = item.description, !description.isEmpty {
                     Text(description)
                         .font(.subheadline)
                         .strikethrough(item.isDone)
@@ -47,6 +47,7 @@ struct TodoItemRow: View {
 #Preview("Title Only", traits: .fixedLayout(width: 300, height: 70)) {
     @Previewable @State var item = TodoItemModel(id: UUID(),
                                                  title: "Buy some milk",
+                                                 description: "",
                                                  isDone: false)
     TodoItemRow(item: $item)
 }

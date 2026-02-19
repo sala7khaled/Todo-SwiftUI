@@ -21,7 +21,7 @@ struct TodoListView: View {
                             viewModel.sortItems()
                         })
                     }
-                    .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 14))
+                    .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 16))
 //                    .alignmentGuide(.listRowSeparatorLeading) { _ in 0 } // To remove divider's leading space
                 }
                 .onDelete { indexSet in

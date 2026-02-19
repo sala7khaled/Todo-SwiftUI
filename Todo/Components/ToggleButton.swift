@@ -38,7 +38,12 @@ struct ToggleButton: View {
     }
 }
 
-#Preview(traits: .fixedLayout(width: 40, height: 40)) {
+#Preview("ON", traits: .fixedLayout(width: 40, height: 40)) {
+    @Previewable @State var state = true
+    ToggleButton(state: $state)
+}
+
+#Preview("OFF", traits: .fixedLayout(width: 40, height: 40)) {
     @Previewable @State var state = false
     ToggleButton(state: $state)
 }

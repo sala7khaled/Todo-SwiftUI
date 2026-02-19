@@ -23,7 +23,6 @@ struct MoreInfoView: View {
                             Image(systemName: item.icon)
                             Text(item.title)
                                 .font(.subheadline)
-                            
                         }
                         .padding()
                     }
